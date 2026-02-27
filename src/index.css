@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Poppins", sans-serif;
+  --color-vaga-blue: #0A4D9E;
+  --color-vaga-dark: #0A1F44;
+  --color-vaga-yellow: #FFC107;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+.glass-card {
+  @apply bg-white border border-slate-200 shadow-sm rounded-xl overflow-hidden;
+}
+
+.btn-primary {
+  @apply bg-vaga-blue hover:bg-vaga-dark text-white px-6 py-2.5 rounded-lg font-semibold transition-all active:scale-95 disabled:opacity-50 flex items-center justify-center gap-2;
+}
+
+.btn-accent {
+  @apply bg-vaga-yellow hover:bg-yellow-500 text-vaga-dark px-6 py-2.5 rounded-lg font-bold transition-all active:scale-95 disabled:opacity-50 flex items-center justify-center gap-2;
+}
+
+.btn-secondary {
+  @apply bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 px-6 py-2.5 rounded-lg font-semibold transition-all active:scale-95 flex items-center justify-center gap-2;
+}
+
+.input-field {
+  @apply w-full bg-white border border-slate-200 rounded-lg px-4 py-2.5 text-slate-900 focus:outline-none focus:ring-2 focus:ring-vaga-blue/20 focus:border-vaga-blue transition-all;
+}
+
+.nav-link {
+  @apply text-slate-600 hover:text-vaga-blue font-medium transition-colors;
+}
